@@ -8,15 +8,15 @@
 
 1.获取源码
 
-git clone https://github.com/Bilibili/ijkplayer.git ijkplayer-android
-cd ijkplayer-android
-git checkout -B latest k0.8.4
+git clone https://github.com/Bilibili/ijkplayer.git ijkplayer-android</br>
+cd ijkplayer-android</br>
+git checkout -B latest k0.8.4</br>
 
 2.定位到 ijkplayer-android/config 修改 module-lite.sh ，并终端执行命令
 
 https://www.jianshu.com/p/3f78da1c6a61
 
-rm module.sh
+rm module.sh</br>
 ln -s module-lite.sh module.sh
 
 3.定位到 ijkplayer-android ，终端执行命令
@@ -27,7 +27,7 @@ PS:该过程要获取 FFmpeg 源码过程可能比较久，请耐心等待
 
 4.定位到 ijkplayer-android/android/contrib ，编译 FFmpeg
 
-sh compile-ffmpeg.sh clean
+sh compile-ffmpeg.sh clean</br>
 sh compile-ffmpeg.sh all
 
 5.定位到 ijkplayer-android/android ，生成 so 文件
