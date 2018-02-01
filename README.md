@@ -23,7 +23,7 @@ ln -s module-lite.sh module.sh
 
 sh init-android.sh
 
-PS:该过程要获取 FFmpeg 源码过程可能比较久，请耐心等待
+> PS:该过程要获取 FFmpeg 源码过程可能比较久，请耐心等待
 
 4.定位到 ijkplayer-android/android/contrib ，编译 FFmpeg
 
