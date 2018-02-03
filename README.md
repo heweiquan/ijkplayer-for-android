@@ -56,4 +56,4 @@ FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-encoder=h264"
 #配置后发现秒开看到界面了，可是发现会有绿屏，看官网issue，想想可能需要支持h264
 ```
 
-<image src="./image/002.png" width=500"/>
+<img src="./image/002.png" width=500"/>
