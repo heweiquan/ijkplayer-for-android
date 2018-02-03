@@ -35,3 +35,25 @@ sh compile-ffmpeg.sh all
 sh compile-ijk.sh all
 
 6.定位到 ijkplayer-android/android/ijkplayer ，根据自己的需要导入项目即可
+
+> PS:</br>
+> 若出现 rtsp 可以播放但视频出现绿屏问题，解决方法是：定位到 ijkplayer-android/android/contrib/tools/do-compile-ffmpeg.sh ，然后添加以下代码即可：
+
+```
+#配置后发现秒开看到界面了，可是发现会有绿屏，看官网issue，想想可能需要支持h264
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-demuxer=h264"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-protocol=udp"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-decoder=h264"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-parser=h264"
+
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-hwaccel=h264_vaapi"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-hwaccel=h264_vaapi"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-hwaccel=h264_dxva2"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-demuxer=mjpeg"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-demuxer=rtsp"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-demuxer=rtp"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-encoder=h264"
+#配置后发现秒开看到界面了，可是发现会有绿屏，看官网issue，想想可能需要支持h264
+```
+
+<image src="./image/002.png" width=500"/>
